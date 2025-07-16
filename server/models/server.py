@@ -1,6 +1,5 @@
-
-from ...config.logging import logger
-from string_processor import StringProcessor
+from config.logging import logger
+from server.models.string_processor import StringProcessor
 import time
 import socket
 from threading import Thread
