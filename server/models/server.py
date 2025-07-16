@@ -1,27 +1,9 @@
-import logging
+
+from ...config.logging import logger
+from string_processor import StringProcessor
 import time
 import socket
 from threading import Thread
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    filename='server.log',
-    filemode='w'
-)
-logger = logging.getLogger(__name__)
-
-
-class StringProcessor:
-
-    @staticmethod
-    def calculate_weight(string):
-        letters = sum(c.isalpha for c in string)
-        numbers = sum(c.isdigit for c in string)
-        spaces = string.count(' ')
-
-        return (letters * 1.5 + numbers * 2) / spaces
-    
 
 class Server:
     def __init__(self, host='localhost', port=65432):
