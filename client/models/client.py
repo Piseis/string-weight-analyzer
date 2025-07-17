@@ -1,7 +1,7 @@
 import time
 import socket
-from string_generator import StringGenerator
-from ...config.logging import logger
+from client.models.string_generator import StringGenerator
+from config.logging import logger
 
 class StringClient:
     def __init__(self, host='localhost', port=65432):
