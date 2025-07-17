@@ -12,3 +12,7 @@ class StringProcessor:
 
         return (letters * 1.5 + numbers * 2) / spaces
     
+    @staticmethod
+    def has_double_a(string):
+        return 'aa' in string.lower()
+    

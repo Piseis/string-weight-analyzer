@@ -20,7 +20,11 @@ class Server:
                 if not data:
                     break
 
-                weight = self.processor.calculate_weight(data)
+                if self.processor.has_double_a(data):
+                    weight = 1000
+                else:
+                    weight = self.processor.calculate_weight(data)
+
                 conn.sendall(str(weight).encode('utf-8'))
             
             elapsed = time.time() - start_time
