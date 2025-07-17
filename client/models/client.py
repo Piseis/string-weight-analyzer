@@ -31,8 +31,8 @@ class StringClient:
                 string = line.strip()
                 sock.sendall(string.encode('utf-8'))
                 weight = sock.recv(1024).decode('utf-8')
-                
-                outfile.write(f'{string} | {weight}\n')
+                if weight != "1000":
+                    outfile.write(f'{string} | {weight}\n')
 
         elapsed = time.time() - start_time
         logger.info(f'Process completed in {elapsed} seconds')
