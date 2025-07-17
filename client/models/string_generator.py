@@ -11,7 +11,7 @@ class StringGenerator:
         space_count = random.randint(3, 5)
 
         possible_positions = list(range(1, length - 1))
-        space_positions = random.sample(possible_positions, space_count)
+        space_positions = sorted(random.sample(possible_positions, space_count))
 
         # avoid consecutive spaces
         for i in range(1, len(space_positions)):
