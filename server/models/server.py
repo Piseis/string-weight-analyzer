@@ -22,6 +22,7 @@ class Server:
 
                 if self.processor.has_double_a(data):
                     weight = 1000
+                    logger.warning(f"Double 'a' rule detected >> '{data}'")
                 else:
                     weight = self.processor.calculate_weight(data)
 
