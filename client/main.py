@@ -1,5 +1,5 @@
 import argparse
-from .models.client import StringClient
+from client.models.client import StringClient
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="String Processing Client")
