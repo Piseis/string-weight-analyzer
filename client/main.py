@@ -9,5 +9,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     client = StringClient(host=args.host, port=args.port)
-    client.genereate_file(args.num_strings)
+    client.generate_file(args.num_strings)
     client.process_strings()
