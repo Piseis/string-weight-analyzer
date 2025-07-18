@@ -22,9 +22,13 @@ Solution/
 ├── client/
 │   ├── main.py
 │   └── models/
+│       ├── client.py
+│       └── string_generator.py
 ├── server/
 │   ├── main.py
 │   └── models/
+│       ├── server.py
+│       └── string_processor.py
 ├── config/
 │   └── logging.py
 ├── chain.txt
@@ -42,8 +46,8 @@ Solution/
 
 2. **Clone the repository:**
     ```sh
-    git clone <your-repo-url>
-    cd Solution
+    git clone https://github.com/Piseis/string-weight-analyzer.git
+    cd string-weight-analyzer
     ```
 
 ## Configuration
